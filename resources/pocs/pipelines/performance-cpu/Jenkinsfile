@@ -1,0 +1,8 @@
+// Loading Shared Libraries
+library identifier: 'my-shared-libraries@performance', retriever: modernSCM(
+  [$class: 'GitSCMSource',
+   remote: 'https://github.com/cloudbees-oss/pipeline-home-demo.git',
+   credentialsId: '*************'])
+
+// Calling the CI Performance Collector in mode 1 for CPU
+performance(1)
